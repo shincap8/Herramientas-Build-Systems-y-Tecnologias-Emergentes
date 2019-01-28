@@ -29,26 +29,22 @@ export default class LoginPage extends Component {
             console.log('Usuario validado', authUser)
             history.push('/')
         }).catch(error => {
-            console.log('Error al intentar logearse', error);
             this.setState({ error: error })
+            alert('Error al inicio de Sesion');
+            console.log('Error al intentar logearse', error);
         })
     }
     //----------------------------------------------------------------//
     render() {
         return (
             <div className='content'>
-                <h1> Iniciar Sesión </h1>
+                <h5> Inicia Sesión </h5>
                 <form onSubmit={this.handleSubmit}>
-                    <label> Emails
-            <input name='email' type='email' placeholder='Correo Electronico'
-                            pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
-                            onChange={event => this.setState({ 'email': event.target.value })} />
-                    </label>
-                    <label> Password
-            <input name='password' type='password' placeholder='Contraseña'
-                            onChange={event => this.setState({ 'password': event.target.value })} />
-                    </label>
-                    <button type='submit'> Iniciar </button>
+                    <label className="left">Correo Electronico</label>
+                    <input name='email' type='email' pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" onChange={event => this.setState({ 'email': event.target.value })} />
+                    <label className="left">Contraseña</label>
+                    <input name='password' type='password' onChange={event => this.setState({ 'password': event.target.value })} />
+                    <button className="btn waves-effect green darken-1" type='submit'> Ingresar </button>
                 </form>
             </div>
         )
