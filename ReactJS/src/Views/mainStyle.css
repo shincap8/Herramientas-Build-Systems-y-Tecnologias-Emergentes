@@ -1,25 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body{
   background-image: url('./img/main-fondo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
-nav{
+
+nav {
   width: 85%;
-  margin: 10px auto;
-  background-color: #309f20;
-} 
+  margin: 0 auto 3rem auto;
+  border-radius: 3px !important
+}
+
+.nav-wrapper{
+  border-radius: 3px !important;
+}
 
 .container{
-  background-color: rgba(200,200,200,0.9);
   padding: 0 10px 0 10px;
   width: 85%;
   border-radius: 8px;
 }
+
 .brand-logo{
   position: relative;
   display: inline !important;
   left: 10px !important;
   transform: none !important;
+  font-size: 18px !important;
 }
 .numProd {
 	display: block;
@@ -38,11 +49,20 @@ nav{
 }
 .buttonToolbar{
   width: 90%;
-  margin: 10px auto;
+  margin: 10px auto 0 auto;
   display: flex;
   justify-content: space-between;
 }
 .buttonToolbar button{
   margin: auto;
   display: block;
+}
+
+h3{
+  padding-top: 1rem;
+  font-size: 25px;
+}
+
+h4{
+  padding-left: 1rem;
 }

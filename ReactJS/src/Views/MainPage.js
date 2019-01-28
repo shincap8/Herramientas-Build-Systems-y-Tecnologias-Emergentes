@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import TopBar from './TopBar'
 import ProductSearch from '../Products/Search'
 import ProductList from '../Products/List'
-//import ProductItem from '../Products/Item'
 
 import { db, firebase } from '../Firebase'
 import './mainStyle.css'
@@ -35,9 +34,7 @@ class MainPage extends Component {
                     db.getProductsInCart(authUser.uid).on('value', snapshot => {
                         if (snapshot.val()) {
                             this.setState({ itemsInCart: snapshot.val() })
-                            console.log(snapshot.val()); //Temporal para ver como tiene la base de datos
-                        } else this.setState({ itemsInCart: [] })
-                        //snapshot.val() ? this.setState({itemsInCart: snapshot.val()}) : null       
+                        } else this.setState({ itemsInCart: [] })   
                     })
                 } else {
                     console.log('No estas logeado')
@@ -45,7 +42,6 @@ class MainPage extends Component {
                 }
             })
         } catch (error) { alert(error) }
-        // Otras consultas a la bd
         db.getProducts().on('value', snapshot => {
             this.setState({ products: snapshot.val() })
         })
@@ -55,7 +51,6 @@ class MainPage extends Component {
 
     //---------------------- Agregar al Carrito ----------------------//
     addToCart = (product, amount) => {
-        console.log('Quieres agregar este item ????')
         const id = this.state.products.indexOf(product)
         const userid = this.state.user.uid
         product.disponible = (product.disponible - amount)
@@ -68,7 +63,6 @@ class MainPage extends Component {
                     product: product,
                     cantidad: amount
                 }])
-        console.log('Has agregado este item ????')
     }
 
     //--------------------------------------------------------------------//
@@ -77,7 +71,7 @@ class MainPage extends Component {
         return (
             <div>
                 <TopBar itemsInCart={this.state.itemsInCart} />
-                <div className='container'>
+                <div className='container grey lighten-5'>
                     <div className='row'>
                         <div className='col s8'>
                             <h3>Catálogo de Productos</h3>

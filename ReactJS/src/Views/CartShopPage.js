@@ -65,21 +65,19 @@ export default class CartShopPage extends Component {
         return (
             <div>
                 <TopBar itemsInCart={this.state.itemsInCart} />
-                <div className='container'>
+                <div className='container grey lighten-5'>
                     <div className='row'>
-                        <div className='col s8 offset-s2'>
+                        <div className='col s8'>
                             <h3> Carrito de compras </h3>
                         </div>
                         <div className='col s7'>
                             <CartList products={this.state.itemsInCart} />
                         </div>
                         <div className='col s5'>
-                            <h4> Total a pagar </h4>
-                            <h5> US${' '}{(this.state.total).toFixed(2)} </h5>
-
+                            <h4> Total: ${(this.state.total).toFixed(2)}</h4>
                             <div className='buttonToolbar'>
-                                <button className='btn' onClick={this.handleCancel}> Cancelar </button>
-                                <button className='btn' onClick={this.handlePay}> Pagar </button>
+                                <button className='btn grey lighten-3 black-text' onClick={this.handleCancel}> Cancelar </button>
+                                <button className='btn grey lighten-3 black-text' onClick={this.handlePay}> Pagar </button>
                             </div>
                         </div>
                     </div>

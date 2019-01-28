@@ -21,14 +21,14 @@ export default class CartItem extends Component {
             <div className='row list-group-item'>
                 <div className='col s6'>
                     <div className='imagen'>
-                        <img src={this.state.imagen} alt='thumbnail' />
+                        <img className="responsive-img" src={this.state.imagen} alt='thumbnail' />
                     </div>
                 </div>
-                <div className='col s6'>
-                    <h3>{this.props.item.product.nombre} </h3>
+                <div className='col s6 propiedades'>
+                    <h4>{this.props.item.product.nombre}</h4>
                     <p><b>Unidades: </b>{this.props.item.cantidad}</p>
-                    <p><b>Precio: </b>US${' '}{(this.props.item.product.precio).toFixed(2)}</p>
-                    <p><b>SubTotal: </b>US${' '}{(this.state.subTotal).toFixed(2)}</p>
+                    <p><b>Precio: </b>${' '}{(this.props.item.product.precio).toFixed(2)}</p>
+                    <p><b>SubTotal: </b>${' '}{(this.state.subTotal).toFixed(2)}</p>
                 </div>
             </div>
         )

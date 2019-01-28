@@ -1,11 +1,13 @@
 .imagen{
-  width: 100%;
-  height: 150px;
+  width: 50%;
   margin-bottom: 10px;
+  display: block;
+  margin: 1rem auto;
 }
 .imagen img{
   width: 100%;
-  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 @supports(object-fit: cover){
   .imagen img{
@@ -17,6 +19,10 @@
 .list-group-item{
   padding: 5px;
 }
-.list-group-item p, h3{
+.list-group-item p, h4{
   margin: 7px 0;
+}
+
+.propiedades{
+  margin-top: 1rem;
 }
