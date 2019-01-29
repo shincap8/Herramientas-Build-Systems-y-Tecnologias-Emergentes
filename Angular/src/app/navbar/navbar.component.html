@@ -1,0 +1,12 @@
+<nav class="container">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">La Bodega</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="#" routerLink="/home"><i class="fas fa-th"></i></a></li>
+      <li><a href="#" routerLink="/compras"><i class="fas fa-shopping-cart">
+            <p *ngIf="mostrar" class="btn-floating halfway waves-effect waves-light red center"> {{cantidad2}}</p>
+          </i></a></li>
+      <li><a (click)="logout()" href="#" routerLink="/"><i class="fas fa-sign-out-alt"></i></a></li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,27 @@
+.fondoprincipal{
+    background-image: url('/src/assets/main-fondo.jpg'); 
+    height: 90%;
+}
+
+.alto{
+    width: 100%;
+    height: 670px;
+    overflow: scroll;
+}
+
+.card-action{
+    justify-content: space-between;
+    align-items: flex-end ;
+}
+
+.card-action button{
+    margin: 0.4px;
+    font-size: 10px;
+}
+
+.card-action input{
+    padding: 2px;
+    margin: 10px;
+    height: 19px;
+    width: 39px;
+}

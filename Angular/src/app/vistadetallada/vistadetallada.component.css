@@ -1,0 +1,16 @@
+.fondoprincipal{
+    background-image: url('/src/assets/img/main-fondo.jpg'); 
+    height: 800px;
+}
+
+.container{
+    padding: 5px;
+}
+
+.container h3{
+    padding: 15px;
+}
+
+.boton{
+    padding: 15px;
+}

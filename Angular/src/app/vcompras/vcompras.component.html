@@ -1,0 +1,36 @@
+<div>
+  <app-navbar></app-navbar>
+</div>
+<div class="container">
+  <div class="row" *ngIf="total ; else mensaje">
+    <div class="col s6">
+      <div *ngFor="let item of carrito">
+        <div class="row">
+          <div class="col s12 card">
+            <div class="col  s5">
+              <img class="responsive-img" src="{{item.foto}}" alt="">
+              <p> Subtotal: {{item.subtotal}}</p>
+            </div>
+            <div class="col s5">
+              {{item.nombre}}
+              <br>
+              <br>
+              <br>
+              Cantidades: {{item.precio}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s6">
+      <div class="card-action">
+        <p>Total: {{total}}</p>
+        <div class="col s4"><button class="btn-small" (click)="cancelar()" routerLink="/home">Cancelar</button></div>
+        <div class="col s4"><button class="btn-small" (click)="actualizaritem()" routerLink="/home">Pagar</button></div>
+      </div>
+    </div>
+  </div>
+  <ng-template #mensaje>
+    <h4>No hay productos para comprar</h4>
+  </ng-template>
+</div>
