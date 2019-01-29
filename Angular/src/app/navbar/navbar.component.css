@@ -1,3 +1,13 @@
-.container {
+.contenedor {
+    max-width: 80%;
+    margin: 0 auto 1rem auto;
+    border-radius: 4px !important;
+}
+
+.nav-wrapper, nav{
+    border-radius: 4px !important;
+}
+
+.brand-logo{
     padding-left: 10px;
 }

@@ -3,10 +3,20 @@
     height: 90%;
 }
 
+.contenedor {
+    max-width: 80%;
+    margin: 0 auto 1rem auto;
+    border-radius: 4px !important;
+}
+
 .alto{
     width: 100%;
     height: 670px;
     overflow: scroll;
+}
+
+.card{
+    border: 1px solid #9e9e9e;
 }
 
 .card-action{
@@ -24,4 +34,9 @@
     margin: 10px;
     height: 19px;
     width: 39px;
+}
+
+.card-image img{
+    max-height: 125px;
+    max-width: 209xp;
 }

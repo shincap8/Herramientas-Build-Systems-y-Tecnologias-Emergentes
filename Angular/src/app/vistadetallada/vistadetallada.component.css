@@ -1,13 +1,16 @@
 .fondoprincipal{
-    background-image: url('/src/assets/img/main-fondo.jpg'); 
+    background-image: url('/src/assets/main-fondo.jpg'); 
     height: 800px;
 }
 
-.container{
+.contenedor {
+    max-width: 80%;
+    margin: 0 auto 1rem auto;
+    border-radius: 4px !important;
     padding: 5px;
 }
 
-.container h3{
+.contenedor h3{
     padding: 15px;
 }
 

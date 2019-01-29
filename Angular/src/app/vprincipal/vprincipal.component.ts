@@ -14,7 +14,7 @@ export class VprincipalComponent implements OnInit {
 
   public catalogo: any[];
   public orden: string = 'nombre';
-  public foto: string;
+  public imagen: string;
   nomfruta: string;
   dirfoto: string;
   precio: number;
@@ -43,7 +43,7 @@ export class VprincipalComponent implements OnInit {
         this.catalogo = [];
         item.forEach(element => {
           let x = element.payload.toJSON();
-          x["key"] = element.key;
+          x["id"] = element.key;
           this.catalogo.push(x);
         })
       })

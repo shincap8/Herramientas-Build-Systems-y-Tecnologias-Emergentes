@@ -27,19 +27,19 @@ export class InicioSesionService {
     return this.items = this.af.list('/productos');
   }
 
-  actualizar($key, compra) {
-    this.items.update($key, compra);
+  actualizar(id, compra) {
+    this.items.update(id, compra);
   }
 
   getAuth() {
     return this.afAuth.authState.map(auth => auth);
   }
 
-  itemactual(nomfruta, dirfoto, precio, unidades, descripcion) {
-    this.nombre = nomfruta;
-    this.imagen = dirfoto;
+  itemactual(nombre, imagen, precio, disponible, descripcion) {
+    this.nombre = nombre;
+    this.imagen = imagen;
     this.precio = precio;
-    this.disponible = unidades;
+    this.disponible = disponible;
     this.descripcion = descripcion;
   }
 

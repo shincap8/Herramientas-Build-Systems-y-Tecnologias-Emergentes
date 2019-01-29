@@ -8,18 +8,18 @@ import { InicioSesionService } from '../servicios/inicio-sesion.service'
 })
 export class VistadetalladaComponent implements OnInit {
 
-  nomfruta: string;
-  dirfoto: string;
+  nombre: string;
+  imagen: string;
   precio: number;
-  unidades: number;
+  disponible: number;
   descripcion: string;
 
   constructor(private vista: InicioSesionService) {
 
-    this.nomfruta = vista.nombre;
-    this.dirfoto = vista.imagen;
+    this.nombre = vista.nombre;
+    this.imagen = vista.imagen;
     this.precio = vista.precio;
-    this.unidades = vista.disponible;
+    this.disponible = vista.disponible;
     this.descripcion = vista.descripcion;
 
   }
