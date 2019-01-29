@@ -6,4 +6,5 @@ export interface CarritoCompra {
     precio: number,
     disponible: number,
     subtotal: number
+    cantidad: number
 }

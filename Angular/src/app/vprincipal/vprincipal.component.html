@@ -26,12 +26,12 @@
                 <div class="card-content">
                   <span class="card-title">{{item.nombre}}</span>
                   <p>Precio: $ {{item.precio}}</p>
-                  <p>Unidades disponibles: {{item.disponible}}</p>
+                  <p>Unidades disponibles: {{item.disponible ? item.disponible : 'Agotado'}}</p>
                 </div>
                 <div class="row">
                   <div class="card-action">
                     <div class="col s4"><button class="btn-small blue darken-3" routerLink="/vistadetallada" (click)="ver(item.nombre,item.imagen,item.precio,item.disponible,item.descripcion)">Ver Mas</button></div>
-                    <div class="col s4"><button class="btn-small yellow darken-3" (click)="addCompra(item.id,item.nombre,item.imagen,item.precio*cantidad.value,item.disponible,cantidad.value)">Añadir</button></div>
+                    <div class="col s4"><button class="btn-small yellow darken-3" (click)="addCompra(item.id,item.nombre,item.imagen,item.precio,item.disponible,cantidad.value)">Añadir</button></div>
                     <div class="col s4"><input type="number" min="1" value="1" #cantidad></div>
                   </div>
                 </div>

@@ -29,7 +29,8 @@ export class VprincipalComponent implements OnInit {
     imagen: string,
     precio: number,
     disponible: number,
-    subtotal: number
+    subtotal: number,
+    cantidad: number
   };
 
 
@@ -58,14 +59,20 @@ export class VprincipalComponent implements OnInit {
       id: id,
       nombre: nomfruta,
       imagen: dirfoto,
-      precio: cantidad,
+      precio: precio,
       disponible: unidadOrig,
-      subtotal: precio
+      subtotal: cantidad*precio,
+      cantidad: cantidad
     };
-    this.total += precio;
+    for (let item of this.catalogo) {
+      if (item.id == id) {
+        item.disponible = unidadOrig - cantidad;
+        this.total = this.total + (cantidad*precio);
+      }
+    }
     this.liscatalogo.anadirCompra(this.compra, this.total)
     this.cantidad2 = this.cantidad2 + parseInt(cantidad);
     this.mostrar = true;
+    
   }
-
 }

@@ -24,7 +24,7 @@ export class VcomprasComponent implements OnInit {
     for (let index = 0; index < this.carrito.length; index++) {
       const element = this.carrito[index];
       this.compra.actualizar(element.id, {
-        disponible: element.disponible - element.precio,
+        disponible: element.disponible - element.cantidad,
       });
     }
     this.carrito = [];
