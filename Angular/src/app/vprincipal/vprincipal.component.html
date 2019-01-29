@@ -1,22 +1,21 @@
 <div class="fondoprincipal">
   <app-navbar [cantidad2]="cantidad2" [mostrar]="mostrar"></app-navbar>
   <div class="contenedor white">
-    <div class="alto">
-      <div class="row">
+      <div class="row busqueda">
         <div class="col s8">
-          <h3>Catálogo de productos</h3>
+          <h5>Catálogo de productos</h5>
         </div>
         <div class="col s4">
           <div class="row">
             <div class="input-field col s11">
               <i class="material-icons prefix">search</i>
-              <label for="buscar">¿Que estas Buscando?</label>
               <input type="text" [(ngModel)]='buscar'>
+              <label for="buscar">¿Que estas Buscando?</label>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row alto">
         <ul>
           <li *ngFor="let item of catalogo | datafilter: buscar | orderBy: orden">
             <div class="col s3">
@@ -26,14 +25,13 @@
                 </div>
                 <div class="card-content">
                   <span class="card-title">{{item.nombre}}</span>
-                  <p>Precio: ${{item.precio}}</p>
+                  <p>Precio: $ {{item.precio}}</p>
                   <p>Unidades disponibles: {{item.disponible}}</p>
                 </div>
                 <div class="row">
                   <div class="card-action">
-                    <div class="col s4"><button class="btn-small" routerLink="/vistadetallada" (click)="ver(item.nombre,item.foto,item.precio,item.unidades)">Ver
-                        Mas</button></div>
-                    <div class="col s4"><button class="btn-small" (click)="addCompra(item.$key,item.nombre,item.foto,item.precio*cantidad.value,item.unidades,cantidad.value)">Añadir</button></div>
+                    <div class="col s4"><button class="btn-small blue darken-3" routerLink="/vistadetallada" (click)="ver(item.nombre,item.imagen,item.precio,item.disponible,item.descripcion)">Ver Mas</button></div>
+                    <div class="col s4"><button class="btn-small yellow darken-3" (click)="addCompra(item.id,item.nombre,item.imagen,item.precio*cantidad.value,item.disponible,cantidad.value)">Añadir</button></div>
                     <div class="col s4"><input type="number" min="1" value="1" #cantidad></div>
                   </div>
                 </div>
@@ -42,6 +40,5 @@
           </li>
         </ul>
       </div>
-    </div>
   </div>
 </div>

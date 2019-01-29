@@ -7,15 +7,15 @@ import { InicioSesionService } from '../servicios/inicio-sesion.service'
   styleUrls: ['./vistadetallada.component.css']
 })
 export class VistadetalladaComponent implements OnInit {
-
-  nombre: string;
-  imagen: string;
-  precio: number;
-  disponible: number;
-  descripcion: string;
+  
+  nombre:string;
+  imagen:string;
+  precio:number;
+  disponible:number;
+  descripcion:string;
 
   constructor(private vista: InicioSesionService) {
-
+    
     this.nombre = vista.nombre;
     this.imagen = vista.imagen;
     this.precio = vista.precio;

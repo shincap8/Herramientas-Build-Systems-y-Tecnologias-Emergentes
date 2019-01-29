@@ -9,14 +9,11 @@
           <div class="col s12 card">
             <div class="col  s5">
               <img class="responsive-img" src="../../assets/{{item.imagen}}" alt="">
-              <p> Subtotal: {{item.subtotal}}</p>
             </div>
             <div class="col s5">
-              {{item.nombre}}
-              <br>
-              <br>
-              <br>
-              Cantidades: {{item.precio}}
+              <p><strong>{{item.nombre}}</strong></p>
+              <p>Unidades: {{item.precio}}</p>
+              <p>Subtotal: ${{item.subtotal}}</p>
             </div>
           </div>
         </div>
@@ -24,9 +21,9 @@
     </div>
     <div class="col s6">
       <div class="card-action">
-        <p>Total: {{total}}</p>
-        <div class="col s4"><button class="btn-small" (click)="cancelar()" routerLink="/home">Cancelar</button></div>
-        <div class="col s4"><button class="btn-small" (click)="actualizaritem()" routerLink="/home">Pagar</button></div>
+        <h5>Total: ${{total}}</h5>
+        <div class="col s4"><button class="btn-small grey lighten-1" (click)="cancelar()" routerLink="/home">Cancelar</button></div>
+        <div class="col s4"><button class="btn-small grey lighten-1" (click)="actualizaritem()" routerLink="/home">Pagar</button></div>
       </div>
     </div>
   </div>

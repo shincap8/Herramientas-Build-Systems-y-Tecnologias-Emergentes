@@ -17,3 +17,8 @@
 .boton{
     padding: 15px;
 }
+
+.contenedor img{
+    max-height: 350px;
+    max-width: 500px;
+}

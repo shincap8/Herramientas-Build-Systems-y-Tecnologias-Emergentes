@@ -19,6 +19,7 @@ export class InicioSesionService {
   cantidad: number;
   total: number;
   descripcion: string;
+
   comprasdb: CarritoCompra[] = [];
 
   constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase) { }
@@ -27,8 +28,8 @@ export class InicioSesionService {
     return this.items = this.af.list('/productos');
   }
 
-  actualizar(id, compra) {
-    this.items.update(id, compra);
+  actualizar($id, compra) {
+    this.items.update($id, compra);
   }
 
   getAuth() {

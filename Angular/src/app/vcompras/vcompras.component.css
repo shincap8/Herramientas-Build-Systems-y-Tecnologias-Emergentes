@@ -3,3 +3,11 @@
     margin: 0 auto 1rem auto;
     border-radius: 4px !important;
 }
+
+img{
+    margin: 1rem 0;
+}
+
+strong{
+    font-size: 18px;
+}
