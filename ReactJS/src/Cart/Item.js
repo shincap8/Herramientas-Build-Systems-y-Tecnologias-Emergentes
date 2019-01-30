@@ -27,8 +27,8 @@ export default class CartItem extends Component {
                 <div className='col s6 propiedades'>
                     <h4>{this.props.item.product.nombre}</h4>
                     <p><b>Unidades: </b>{this.props.item.cantidad}</p>
-                    <p><b>Precio: </b>${' '}{(this.props.item.product.precio).toFixed(2)}</p>
-                    <p><b>SubTotal: </b>${' '}{(this.state.subTotal).toFixed(2)}</p>
+                    <p><b>Precio: </b>${(this.props.item.product.precio)}</p>
+                    <p><b>SubTotal: </b>${(this.state.subTotal)}</p>
                 </div>
             </div>
         )

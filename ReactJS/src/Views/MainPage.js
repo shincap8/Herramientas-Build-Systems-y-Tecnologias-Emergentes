@@ -69,7 +69,7 @@ class MainPage extends Component {
     render() {
         const { products } = this.state
         return (
-            <div>
+            <div className='fondoprincipal'>
                 <TopBar itemsInCart={this.state.itemsInCart} />
                 <div className='container grey lighten-5'>
                     <div className='row'>
@@ -80,7 +80,7 @@ class MainPage extends Component {
                             <ProductSearch search={this.searchProduct.bind(this)} />
                         </div>
                     </div>
-                    <div className='row'>
+                    <div className='row alto'>
                         {!!products && <ProductList products={products}
                             filter={this.state.filter}
                             add={this.addToCart.bind(this)} />}
